@@ -318,10 +318,8 @@ public class SurfaceUtils {
         Resources res = ActivityThread.currentApplication().getResources();
         packageList.addAll(Arrays.asList(res.getStringArray(
                 org.lineageos.platform.internal.R.array.config_cameraHFRPrivAppList)));
-                
-        if (packageName == null || packageList == null ||
-            (cameraPackage != null && !cameraPackage.isEmpty() && 
-            packageName.toLowerCase().contains(cameraPackage.toLowerCase()))) {
+
+        if (cameraPackage != null && !cameraPackage.isEmpty() && packageName.toLowerCase().contains(cameraPackage.toLowerCase())) {
             return true;
         }
 
